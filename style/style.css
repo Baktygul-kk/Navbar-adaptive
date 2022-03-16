@@ -49,5 +49,69 @@ body {
 }
 
 .nav-links li:hover {
-    background-color: rgb(250, 246, 215);
+    background-color: rgb(248, 235, 46);
+    color: black;
+   
 } 
+
+
+.toggle-button {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 3px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 500px){
+    .toggle-button {
+        display: flex;
+    }
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+        background-color: black;
+       
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        
+
+    }
+    .nav-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        text-align: center;
+       
+    }
+    .nav-links li a {
+        padding: .5rem 1rem;
+        color: white;
+    }
+
+    .nav-links.active {
+        display: flex;
+        color: black;
+    }
+
+}
